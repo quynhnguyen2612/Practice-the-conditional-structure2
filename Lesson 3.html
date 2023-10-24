@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--  tính diện tích hình vuông cạnh a-->
+  <table>
+    <tr>
+      <td>chiều dài cạnh</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><input type="number" id="num"></td>
+      <td><button onclick="acreage()">result</button></td>
+    </tr>
+  </table>
+  <p id="result"></p>
+  <script>
+      function acreage() {
+        let inputNum = +document.getElementById('num').value;
+        let outputNum;
+        outputNum = inputNum*inputNum;
+        document.getElementById('result').innerHTML ='Dien tich hinh vuong la: '+ outputNum;
+      }
+  </script>
+</body>
+</html>

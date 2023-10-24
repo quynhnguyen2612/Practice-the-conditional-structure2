@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Chuyển đổi từ mét sang feet-->
+<table>
+  <tr>
+    <td>Mét</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><input type="number" id="num"></td>
+    <td><button onclick="convert()">convert</button></td>
+  </tr>
+</table>
+<p id="result"></p>
+<script>
+  function convert() {
+    let inputNum = +document.getElementById('num').value;
+    let outputNum;
+    outputNum= inputNum*3.2808;
+    document.getElementById('result').innerHTML='Feet là : '+outputNum;
+  }
+</script>
+</body>
+</html>

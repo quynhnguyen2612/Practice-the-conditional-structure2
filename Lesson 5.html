@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <!--Tính diện tích hình tam giác khi biết 02 cạnh kề a, b.-->
+  <table>
+    <tr>
+      <td>Chiều dài cạnh a</td>
+      <td>Chiều dài cạnh b</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><input type="number" id="num1"></td>
+      <td><input type="number" id="num2"></td>
+      <td><button onclick="acreage()">result</button></td>
+    </tr>
+  </table>
+  <p id="result"></p>
+  <script>
+    function acreage() {
+      let inputNumA = +document.getElementById('num1').value;
+      let inputNumB = +document.getElementById('num2').value;
+      let outputNum;
+      outputNum = (inputNumA*inputNumB)/2;
+      document.getElementById('result').innerHTML ='Diện tích hình tam giác là: '+ outputNum;
+    }
+  </script>
+</body>
+</html>

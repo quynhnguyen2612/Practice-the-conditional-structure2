@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+  <tr>
+    <td>Thu nhập</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><input type="number" id="money"></td>
+    <td><button onclick="check()">Check</button></td>
+  </tr>
+</table>
+<p id="result"></p>
+<script>
+  function check() {
+    let money = document.getElementById("money").value;
+    var tax = 0;
+
+    if (money <= 5000000) {
+      tax = money * 0.05;
+    } else if (money <= 10000000) {
+      tax = money * 0.1;
+    } else if (money <= 18000000) {
+      tax = money * 0.15;
+    } else if (money <= 32000000) {
+      tax = money * 0.2;
+    } else {
+      tax = money * 0.25;
+    }
+
+   document.getElementById('result').innerHTML='Thuế thu nhập cá nhân là: ' + tax +'đồng';
+  }
+</script>
+</body>
+</html>

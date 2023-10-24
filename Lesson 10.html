@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--tính giá điện tiêu thụ-->
+<table>
+    <tr>
+        <th>số điện tiêu thụ</th>
+        <td></td>
+    </tr>
+    <tr>
+       <td><input type="text" id="electricity"></td>
+        <td><button onclick="money()">tính tiền</button></td>
+    </tr>
+
+</table>
+<p id="result"></p>
+<script>
+    function money() {
+        let inputElectricity = +document.getElementById('electricity').value;
+        let totalMoney;
+        if (inputElectricity <50) {
+            totalMoney= inputElectricity*800;
+        } else if(inputElectricity<100) {
+            totalMoney= inputElectricity*1000;
+        } else if(inputElectricity<200) {
+            totalMoney= inputElectricity*1500;
+        } else {
+            totalMoney = inputElectricity*2000;
+        }
+        document.getElementById("result").innerHTML='Tiền điện là: '+totalMoney+' đồng';
+    }
+
+</script>
+</body>
+</html>

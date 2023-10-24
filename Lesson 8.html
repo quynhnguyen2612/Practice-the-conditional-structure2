@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!-- Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.-->
+    <table>
+        <tr>
+            <td>Nhập số tuổi</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="number" id="year"></td>
+            <td><button onclick="check()">check</button></td>
+        </tr>
+    </table>
+    <p id="result"></p>
+    <script>
+        function check() {
+            let year= +document.getElementById("year").value;
+            if(year>0&&year<=120) {
+                document.getElementById("result").innerHTML='Đây là một tuổi hợp lệ của một người.';
+            } else {
+                document.getElementById("result").innerHTML="Đây không phải là một tuổi hợp lệ của một người.";
+            }
+        }
+    </script>
+</body>
+</html>

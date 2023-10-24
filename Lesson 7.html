@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>giá trị của a</td>
+        <td>giá trị của b</td>
+        <td>giá trị của c</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><input type="number" id="num1"></td>
+        <td><input type="number" id="num2"></td>
+        <td><input type="number" id="num3"></td>
+        <td><button onclick="experience()">result</button></td>
+    </tr>
+</table>
+<p id="result"></p>
+<script>
+    function experience() {
+        let a= +document.getElementById('num1').value;
+        let b= +document.getElementById('num2').value;
+        let c= +document.getElementById('num3').value;
+        let delta = b * b - 4 * a * c;
+        if (delta < 0) {
+            document.getElementById('result').innerHTML= "Phương trình vô nghiệm"
+        } else if (delta === 0) {
+            let x = -b / (2 * a);
+            document.getElementById('result').innerHTML= "Phương trình có nghiệm kép là x = " + x;
+        } else {
+            let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+            let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+            document.getElementById('result').innerHTML= "Phương trình có 2 nghiệm là x1= " + x1 + " x2 = " + x2;
+        }
+    }
+</script>
+</body>
+</html>
